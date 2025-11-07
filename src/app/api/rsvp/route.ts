@@ -1,36 +1,17 @@
-import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
-
-// Initialize database table (run once)
-async function initDatabase() {
-  try {
-    await sql`
-      CREATE TABLE IF NOT EXISTS rsvp (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR(255) NOT NULL,
-        attendance VARCHAR(50) NOT NULL,
-        message TEXT,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-      );
-    `;
-  } catch (error) {
-    console.error('Database initialization error:', error);
-  }
-}
+import { prisma } from '@/lib/prisma';
 
 // GET - Fetch all RSVPs
 export async function GET() {
   try {
-    await initDatabase();
+    const rsvps = await prisma.rSVP.findMany({
+      orderBy: {
+        createdAt: 'desc',
+      },
+      take: 50,
+    });
     
-    const { rows } = await sql`
-      SELECT id, name, attendance, message, created_at
-      FROM rsvp
-      ORDER BY created_at DESC
-      LIMIT 50;
-    `;
-    
-    return NextResponse.json({ success: true, data: rows });
+    return NextResponse.json({ success: true, data: rsvps });
   } catch (error) {
     console.error('Error fetching RSVPs:', error);
     return NextResponse.json(
@@ -43,8 +24,6 @@ export async function GET() {
 // POST - Create new RSVP
 export async function POST(request: Request) {
   try {
-    await initDatabase();
-    
     const body = await request.json();
     const { name, attendance, message } = body;
 
@@ -56,15 +35,17 @@ export async function POST(request: Request) {
       );
     }
 
-    const result = await sql`
-      INSERT INTO rsvp (name, attendance, message)
-      VALUES (${name}, ${attendance}, ${message || ''})
-      RETURNING id, name, attendance, message, created_at;
-    `;
+    const rsvp = await prisma.rSVP.create({
+      data: {
+        name,
+        attendance,
+        message: message || null,
+      },
+    });
 
     return NextResponse.json({
       success: true,
-      data: result.rows[0],
+      data: rsvp,
       message: 'RSVP submitted successfully'
     });
   } catch (error) {

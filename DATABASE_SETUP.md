@@ -1,48 +1,76 @@
-# Database Setup Guide for RSVP Feature
+# Database Setup Guide for RSVP Feature (Prisma + PostgreSQL)
 
-This wedding invitation now includes a fully functional RSVP system with Create and Read operations that saves data to Vercel Postgres.
+This wedding invitation now includes a fully functional RSVP system with Create and Read operations using Prisma ORM and PostgreSQL database.
 
 ## Setup Instructions
 
-### 1. Create Vercel Postgres Database
+### 1. Get a Free PostgreSQL Database
 
-1. Go to your project on [Vercel Dashboard](https://vercel.com/dashboard)
-2. Click on the **Storage** tab
-3. Click **Create Database**
-4. Select **Postgres**
-5. Choose a database name (e.g., `wedding-rsvp`)
-6. Select your region (choose closest to your users)
-7. Click **Create**
+You have several options for free PostgreSQL hosting:
 
-### 2. Connect Database to Your Project
+#### Option A: Supabase (Recommended)
+1. Go to [supabase.com](https://supabase.com)
+2. Create a free account
+3. Create a new project
+4. Copy the **Database URL** (Connection String) from Project Settings → Database
 
-After creating the database:
+#### Option B: Neon
+1. Go to [neon.tech](https://neon.tech)
+2. Create a free account
+3. Create a new project
+4. Copy the **Connection String**
 
-1. Vercel will automatically add the environment variables to your project
-2. The database table will be created automatically on first API call
-3. No additional configuration needed!
+#### Option C: Railway
+1. Go to [railway.app](https://railway.app)
+2. Create a free account
+3. Create a new PostgreSQL database
+4. Copy the **Database URL**
 
-### 3. Environment Variables (Automatic)
+### 2. Set Up Environment Variables
 
-Vercel automatically adds these to your project:
-- `POSTGRES_URL`
-- `POSTGRES_PRISMA_URL`
-- `POSTGRES_URL_NO_SSL`
-- `POSTGRES_URL_NON_POOLING`
-- `POSTGRES_USER`
-- `POSTGRES_HOST`
-- `POSTGRES_PASSWORD`
-- `POSTGRES_DATABASE`
+1. Create a `.env` file in your project root (if not exists)
+2. Add your database URL:
 
-### 4. Local Development (Optional)
+```env
+DATABASE_URL="your-postgresql-connection-string-here"
+```
 
-If you want to test locally:
+Example:
+```env
+DATABASE_URL="postgresql://user:password@host:5432/database?schema=public"
+```
 
-1. Go to your Vercel project settings
-2. Navigate to **Environment Variables**
-3. Copy all POSTGRES_* variables
-4. Create a `.env.local` file in your project root
-5. Paste the variables there
+### 3. Generate Prisma Client and Run Migration
+
+Run these commands in your terminal:
+
+```bash
+# Generate Prisma Client
+npx prisma generate
+
+# Create database tables
+npx prisma migrate dev --name init
+
+# (Optional) Open Prisma Studio to view your data
+npx prisma studio
+```
+
+### 4. Deploy to Vercel
+
+1. Push your code to GitHub
+2. Import your project to Vercel
+3. In Vercel project settings, go to **Environment Variables**
+4. Add `DATABASE_URL` with your PostgreSQL connection string
+5. Redeploy your project
+
+### 5. Verify Setup
+
+After deployment:
+1. Visit your wedding invitation URL
+2. Scroll to the RSVP section
+3. Submit a test RSVP
+4. Check if it appears in the list below the form
+5. (Optional) Use `npx prisma studio` locally to view database contents
 
 ## Features Implemented
 
@@ -57,26 +85,27 @@ If you want to test locally:
 - **Attendance** (required): Hadir, Tidak Hadir, or Masih Ragu
 - **Message** (optional): Guest wishes/messages
 
-### Database Schema
+### Database Schema (Prisma)
 
-```sql
-CREATE TABLE rsvp (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  attendance VARCHAR(50) NOT NULL,
-  message TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+```prisma
+model RSVP {
+  id         Int      @id @default(autoincrement())
+  name       String
+  attendance String
+  message    String?
+  createdAt  DateTime @default(now())
+}
 ```
 
-## Testing
+## Local Testing
 
-1. Deploy your project to Vercel
-2. Set up the Postgres database
-3. Visit your wedding invitation
-4. Scroll to the RSVP section
-5. Fill out the form and submit
-6. Your RSVP will appear in the list below!
+1. Make sure you've created a `.env` file with `DATABASE_URL`
+2. Run `npx prisma generate` to generate Prisma Client
+3. Run `npx prisma migrate dev` to create database tables
+4. Start your development server: `npm run dev`
+5. Visit `http://localhost:3000`
+6. Test the RSVP form
+7. Use `npx prisma studio` to view database contents
 
 ## Features
 
@@ -92,22 +121,42 @@ CREATE TABLE rsvp (
 
 ## Troubleshooting
 
-### "Failed to fetch RSVPs"
-- Make sure your Vercel Postgres database is created and connected
-- Check that environment variables are set in Vercel project settings
-- Redeploy your project after setting up the database
+### "Failed to fetch RSVPs" or "Prisma Client Error"
+- Make sure you've run `npx prisma generate` after installing Prisma
+- Check that `DATABASE_URL` is set in your `.env` file (local) or Vercel environment variables (production)
+- Verify your database connection string is correct
+- Run `npx prisma migrate dev` to ensure tables are created
 
-### Local Development Not Working
-- Ensure you've copied the environment variables to `.env.local`
-- Make sure the database URL is accessible from your local machine
-- Some Vercel Postgres databases require SSL connections
+### "Table does not exist"
+- Run `npx prisma migrate dev --name init` to create database tables
+- Make sure your database is accessible and credentials are correct
+
+### Vercel Deployment Issues
+- Ensure `DATABASE_URL` is added to Vercel environment variables
+- Add this to your `package.json` scripts if not present:
+  ```json
+  "postinstall": "prisma generate"
+  ```
+- This ensures Prisma Client is generated during Vercel build
 
 ## Cost
 
-Vercel Postgres has a free tier that includes:
-- Up to 256 MB storage
-- 60 hours of compute time per month
-- Perfect for small wedding invitation sites!
+All recommended PostgreSQL hosting options have generous free tiers:
 
-For larger weddings or more features, consider upgrading to a paid plan.
+**Supabase Free Tier:**
+- 500 MB database space
+- Up to 2 GB bandwidth
+- Unlimited API requests
+- Perfect for wedding invitation sites!
+
+**Neon Free Tier:**
+- 512 MB storage
+- 1 project
+- Serverless PostgreSQL
+
+**Railway Free Tier:**
+- $5 credit per month
+- No credit card required
+
+All options are more than sufficient for a wedding invitation with hundreds of RSVPs!
 

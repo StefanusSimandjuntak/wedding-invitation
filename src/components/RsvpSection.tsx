@@ -7,8 +7,8 @@ interface RSVP {
   id: number;
   name: string;
   attendance: string;
-  message: string;
-  created_at: string;
+  message: string | null;
+  createdAt: string;
 }
 
 export default function RsvpSection() {
@@ -146,7 +146,7 @@ export default function RsvpSection() {
                   {rsvp.message && (
                     <p className="opacity-80 mt-1">{rsvp.message}</p>
                   )}
-                  <p className="mt-2 text-xs opacity-70">{formatDate(rsvp.created_at)}</p>
+                  <p className="mt-2 text-xs opacity-70">{formatDate(rsvp.createdAt)}</p>
                 </div>
                 <span className={`rounded-full px-3 py-1 text-xs whitespace-nowrap ${
                   rsvp.attendance === 'Hadir' ? 'bg-green-500/20 text-green-300' :
