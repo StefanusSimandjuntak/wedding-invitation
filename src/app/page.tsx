@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Hero from "@/components/Hero";
 import TitleStripeSection from "@/components/TitleStripeSection";
@@ -15,10 +15,7 @@ import StoryTimeline from "@/components/StoryTimeline";
 import GiftSection from "@/components/GiftSection";
 import ThanksSection from "@/components/ThanksSection";
 
-export default function Home() {
-  const [opened, setOpened] = useState(false);
-  const [guestName, setGuestName] = useState("Guest Name");
-  const firstSectionRef = useRef<HTMLElement | null>(null);
+function SearchParamsHandler({ setGuestName }: { setGuestName: (name: string) => void }) {
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -26,10 +23,21 @@ export default function Home() {
     if (name) {
       setGuestName(decodeURIComponent(name).replace(/_/g, " "));
     }
-  }, [searchParams]);
+  }, [searchParams, setGuestName]);
+
+  return null;
+}
+
+export default function Home() {
+  const [opened, setOpened] = useState(false);
+  const [guestName, setGuestName] = useState("Guest Name");
+  const firstSectionRef = useRef<HTMLElement | null>(null);
 
   return (
     <main>
+      <Suspense fallback={null}>
+        <SearchParamsHandler setGuestName={setGuestName} />
+      </Suspense>
       <Hero opened={opened} setOpened={setOpened} firstSectionRef={firstSectionRef} nextId={opened ? "title" : undefined} guestName={guestName} />
 
       {opened && <TitleStripeSection sectionRef={firstSectionRef} />}
