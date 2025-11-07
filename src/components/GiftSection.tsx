@@ -31,7 +31,7 @@ export default function GiftSection() {
   };
 
   return (
-    <Section id="gift" bgImage="https://www.veslavia.com/demo/images/headerImg6.webp" nextId="thanks" contentClassName="animate-fade-in">
+    <Section id="gift" bgImage="/assets/images/IMG-20251107-WA0018.jpg" nextId="thanks" contentClassName="animate-fade-in">
       <div className="text-center mb-12">
         <h2 className="title text-4xl md:text-5xl">Wedding Love Gift</h2>
         <div className="mt-4 h-px w-24 mx-auto bg-white/30" />
@@ -42,7 +42,7 @@ export default function GiftSection() {
 
       <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
         {giftOptions.map((gift, index) => (
-          <div key={index} className="w-full max-w-md h-44 rounded-xl p-4 shadow-lg flex flex-col justify-between bg-gradient-to-r text-white backdrop-blur-md bg-opacity-50 mx-auto">
+          <div key={index} className="card-glass w-full max-w-md h-44 rounded-xl p-6 shadow-lg flex flex-col justify-between text-white mx-auto">
             <div className="text-right text-lg font-mono">{gift.bank}</div>
             {gift.logo}
             <div className="font-mono text-base ml-2 mt-4">{gift.accountNumber}</div>
@@ -50,7 +50,7 @@ export default function GiftSection() {
               <div className="font-mono text-sm ml-2">{gift.accountName}</div>
               <button
                 onClick={() => copyToClipboard(gift.accountNumber.replace(/\s/g, ''))}
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors rounded-xl border border-white/30 bg-white/10 px-4 py-2 hover:bg-white/20"
               >
                 Copy Number
               </button>
