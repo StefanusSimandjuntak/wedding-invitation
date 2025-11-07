@@ -16,7 +16,7 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(https://www.veslavia.com/demo/images/heroImg1.webp)" }}
+          style={{ backgroundImage: "url(/assets/images/IMG-20251107-WA0018.jpg)" }}
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>

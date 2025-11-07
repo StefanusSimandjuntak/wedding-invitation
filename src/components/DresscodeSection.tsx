@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 
 export default function DresscodeSection() {
   return (
-    <Section id="dresscode" bgImage="https://www.veslavia.com/demo/images/headerImg6.webp" nextId="countdown" contentClassName="animate-zoom-in">
+    <Section id="dresscode" bgImage="/assets/images/IMG-20251107-WA0014.jpg" nextId="countdown" contentClassName="animate-zoom-in">
       <div className="text-center">
         <h2 className="title">DRESS CODE</h2>
         <p className="subtitle mt-4">Kami dengan hormat menganjurkan para tamu untuk mengenakan warna pakaian berikut:</p>

@@ -8,26 +8,26 @@ export default function StoryTimeline() {
       date: "2013",
       title: "First Meeting",
       description: "It all began back in 2013, when our paths first crossed during our school days. What started as a simple friendship slowly blossomed into something beautiful — a love story that truly began in 2015, when we chose to walk hand in hand through the journey of life.",
-      image: "https://www.veslavia.com/demo/images/story1.webp",
+      image: "/assets/images/IMG-20251107-WA0010.jpg",
     },
     {
       id: 2,
       date: "July 20, 2025",
       title: "Engagement",
       description: "After years of growing together, sharing dreams, and facing challenges side by side, we took another meaningful step — seeking blessings and celebrating our engagement in July 2025.",
-      image: "https://www.veslavia.com/demo/images/story2.webp",
+      image: "/assets/images/IMG-20251107-WA0011.jpg",
     },
     {
       id: 3,
       date: "December 06, 2025",
       title: "Wedding",
       description: "Now, with hearts full of gratitude and hope, we are ready to begin a new chapter — the beginning of our lifelong journey as husband and wife, in December 2025.",
-      image: "https://www.veslavia.com/demo/images/story3.webp",
+      image: "/assets/images/IMG-20251107-WA0012.jpg",
     },
   ];
 
   return (
-    <Section id="story" bgImage="https://www.veslavia.com/demo/images/headerImg3.webp" nextId="gallery" contentClassName="animate-fade-in">
+    <Section id="story" bgImage="/assets/images/IMG-20251107-WA0019.jpg" nextId="gallery" contentClassName="animate-fade-in">
       <div className="text-center mb-12">
         <h2 className="title text-4xl md:text-5xl">Our Love Story</h2>
         <div className="mt-4 h-px w-24 mx-auto bg-white/30" />

@@ -14,6 +14,7 @@ import FloatingMenu from "@/components/FloatingMenu";
 import StoryTimeline from "@/components/StoryTimeline";
 import GiftSection from "@/components/GiftSection";
 import ThanksSection from "@/components/ThanksSection";
+import BackgroundMusic from "@/components/BackgroundMusic";
 
 function SearchParamsHandler({ setGuestName }: { setGuestName: (name: string) => void }) {
   const searchParams = useSearchParams();
@@ -38,6 +39,7 @@ export default function Home() {
       <Suspense fallback={null}>
         <SearchParamsHandler setGuestName={setGuestName} />
       </Suspense>
+      <BackgroundMusic />
       <Hero opened={opened} setOpened={setOpened} firstSectionRef={firstSectionRef} nextId={opened ? "title" : undefined} guestName={guestName} />
 
       {opened && <TitleStripeSection sectionRef={firstSectionRef} />}

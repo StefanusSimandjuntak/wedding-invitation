@@ -4,10 +4,10 @@ import Section from "@/components/Section";
 
 export default function CoupleSection() {
   return (
-    <Section id="couple" bgImage="https://www.veslavia.com/demo/images/headerImg.webp" nextId="quote" contentClassName="animate-fade-in">
+    <Section id="couple" bgImage="/assets/images/IMG-20251107-WA0013.jpg" nextId="quote" contentClassName="animate-fade-in">
       <div className="grid gap-10 md:grid-cols-2">
         <div className="relative overflow-hidden rounded-[var(--radius)]">
-          <div className="absolute inset-0 bg-cover bg-center scale-105" style={{ backgroundImage: "url(https://www.veslavia.com/demo/images/groomImg1.webp)" }} />
+          <div className="absolute inset-0 bg-cover bg-center scale-105" style={{ backgroundImage: "url(/assets/images/IMG-20251107-WA0016.jpg)" }} />
           <div className="relative z-10 card-glass m-6 md:m-10 p-8 md:p-10 text-center text-white">
             <h2 className="title">Dewi</h2>
             <div className="my-4 h-px w-24 mx-auto bg-white/30" />
@@ -29,7 +29,7 @@ export default function CoupleSection() {
           <div className="absolute inset-0 bg-black/40 pointer-events-none" />
         </div>
         <div className="relative overflow-hidden rounded-[var(--radius)]">
-          <div className="absolute inset-0 bg-cover bg-center scale-105" style={{ backgroundImage: "url(https://www.veslavia.com/demo/images/brideImg2.webp)" }} />
+          <div className="absolute inset-0 bg-cover bg-center scale-105" style={{ backgroundImage: "url(/assets/images/IMG-20251107-WA0017.jpg)" }} />
           <div className="relative z-10 card-glass m-6 md:m-10 p-8 md:p-10 text-center text-white">
             <h2 className="title">Ihsan</h2>
             <div className="my-4 h-px w-24 mx-auto bg-white/30" />
