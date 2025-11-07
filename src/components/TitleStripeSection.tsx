@@ -14,7 +14,7 @@ export default function TitleStripeSection({ sectionRef }: { sectionRef?: React.
           <div className="relative px-8 py-6 animate-slide-in-right">
             <div className="pointer-events-none absolute inset-0 border-2 border-white/80" />
             <div className="relative z-10 text-center font-serif font-bold leading-tight">
-              <div className="text-5xl md:text-6xl">Dewi</div>
+              <div className="text-5xl md:text-6xl">Manca</div>
               <div className="text-5xl md:text-6xl">&</div>
               <div className="text-5xl md:text-6xl">Ihsan</div>
             </div>

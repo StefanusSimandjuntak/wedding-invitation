@@ -64,7 +64,7 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
                 {/* Content inside circle */}
                 <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 space-y-2 sm:space-y-3 md:space-y-4">
                   <h2 className="text-sm sm:text-base md:text-xl font-bold uppercase tracking-[0.2em] md:tracking-[0.3em]">THE WEDDING OF</h2>
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif italic">Dewi</h1>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif italic">Manca</h1>
                   <div className="text-3xl sm:text-4xl md:text-5xl font-serif italic">&</div>
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif italic">Ihsan</h1>
                   

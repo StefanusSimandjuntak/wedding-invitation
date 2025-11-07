@@ -9,7 +9,7 @@ export default function CoupleSection() {
         <div className="relative overflow-hidden rounded-[var(--radius)]">
           <div className="absolute inset-0 bg-cover bg-center scale-105" style={{ backgroundImage: "url(/assets/images/IMG-20251107-WA0016.jpg)" }} />
           <div className="relative z-10 card-glass m-6 md:m-10 p-8 md:p-10 text-center text-white">
-            <h2 className="title">Dewi</h2>
+            <h2 className="title">Manca</h2>
             <div className="my-4 h-px w-24 mx-auto bg-white/30" />
             <p className="opacity-90 text-white">Dewi Manca Indira, S. Ars.</p>
             <p className="mt-2 opacity-80 text-sm">Putri pertama dari</p>

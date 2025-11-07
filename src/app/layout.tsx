@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wedding Of Dewi & Ihsan",
-  description: "Join us in celebrating the wedding of Dewi & Ihsan. Find event details, RSVP, and more.",
+  title: "Wedding Of Manca & Ihsan",
+  description: "Join us in celebrating the wedding of Manca & Ihsan. Find event details, RSVP, and more.",
 };
 
 export default function RootLayout({
