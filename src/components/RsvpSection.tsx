@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Select from "react-select";
 import Section from "@/components/Section";
 
 interface RSVP {
@@ -11,13 +12,24 @@ interface RSVP {
   createdAt: string;
 }
 
+interface SelectOption {
+  value: string;
+  label: string;
+}
+
 export default function RsvpSection() {
   const [name, setName] = useState("");
-  const [attendance, setAttendance] = useState("");
+  const [attendance, setAttendance] = useState<SelectOption | null>(null);
   const [message, setMessage] = useState("");
   const [rsvps, setRsvps] = useState<RSVP[]>([]);
   const [loading, setLoading] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const attendanceOptions: SelectOption[] = [
+    { value: "Hadir", label: "Hadir" },
+    { value: "Tidak Hadir", label: "Tidak Hadir" },
+    { value: "Masih Ragu", label: "Masih Ragu" },
+  ];
 
   // Fetch RSVPs on component mount
   useEffect(() => {
@@ -53,7 +65,7 @@ export default function RsvpSection() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, attendance, message }),
+        body: JSON.stringify({ name, attendance: attendance.value, message }),
       });
 
       const data = await response.json();
@@ -62,7 +74,7 @@ export default function RsvpSection() {
         setSubmitSuccess(true);
         // Clear form
         setName("");
-        setAttendance("");
+        setAttendance(null);
         setMessage("");
         // Refresh RSVPs
         fetchRsvps();
@@ -91,7 +103,7 @@ export default function RsvpSection() {
   };
 
   return (
-    <Section id="rsvp" bgImage="https://www.veslavia.com/demo/images/rsvpImg2.webp" nextId="gallery" contentClassName="animate-slide-in-left">
+    <Section id="rsvp" bgImage="/assets/images/WhatsApp%20Image%202025-11-07%20at%2012.58.37_80443ac7.jpg" nextId="gallery" contentClassName="animate-slide-in-left">
       <div className="card-glass p-6 md:p-10">
         <h2 className="title text-center">RSVP & Ucapan</h2>
         
@@ -104,17 +116,78 @@ export default function RsvpSection() {
             placeholder="Nama"
             required
           />
-          <select
+          <Select
             value={attendance}
-            onChange={(e) => setAttendance(e.target.value)}
-            className="w-full rounded-xl bg-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-white/30"
-            required
-          >
-            <option value="">Pilih Kehadiran</option>
-            <option value="Hadir">Hadir</option>
-            <option value="Tidak Hadir">Tidak Hadir</option>
-            <option value="Masih Ragu">Masih Ragu</option>
-          </select>
+            onChange={(option) => setAttendance(option)}
+            options={attendanceOptions}
+            placeholder="Pilih Kehadiran"
+            isClearable
+            className="react-select-container"
+            classNamePrefix="react-select"
+            styles={{
+              control: (base) => ({
+                ...base,
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                borderColor: 'transparent',
+                borderRadius: '0.75rem',
+                padding: '0.25rem',
+                minHeight: '3rem',
+                boxShadow: 'none',
+                '&:hover': {
+                  borderColor: 'rgba(255, 255, 255, 0.3)',
+                },
+                '&:focus-within': {
+                  borderColor: 'rgba(255, 255, 255, 0.3)',
+                  boxShadow: '0 0 0 2px rgba(255, 255, 255, 0.3)',
+                },
+              }),
+              menu: (base) => ({
+                ...base,
+                backgroundColor: 'rgba(23, 23, 23, 0.95)',
+                borderRadius: '0.75rem',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+              }),
+              option: (base, state) => ({
+                ...base,
+                backgroundColor: state.isSelected
+                  ? 'rgba(255, 255, 255, 0.2)'
+                  : state.isFocused
+                  ? 'rgba(255, 255, 255, 0.1)'
+                  : 'transparent',
+                color: 'white',
+                cursor: 'pointer',
+                '&:active': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                },
+              }),
+              singleValue: (base) => ({
+                ...base,
+                color: 'white',
+              }),
+              placeholder: (base) => ({
+                ...base,
+                color: 'rgba(255, 255, 255, 0.6)',
+              }),
+              input: (base) => ({
+                ...base,
+                color: 'white',
+              }),
+              dropdownIndicator: (base) => ({
+                ...base,
+                color: 'rgba(255, 255, 255, 0.6)',
+                '&:hover': {
+                  color: 'white',
+                },
+              }),
+              clearIndicator: (base) => ({
+                ...base,
+                color: 'rgba(255, 255, 255, 0.6)',
+                '&:hover': {
+                  color: 'white',
+                },
+              }),
+            }}
+          />
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}

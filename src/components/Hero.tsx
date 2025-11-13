@@ -15,24 +15,29 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
   
   return (
     <section id="home" className="fixed inset-0 w-screen h-screen flex items-center justify-center text-center text-white overflow-hidden z-50">
-      {/* Background image - HD optimized */}
+      {/* Background image - HD optimized with tiling */}
       <div className="absolute inset-0">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0"
           style={{ 
-            backgroundImage: "url('/assets/images/ChatGPT Image Nov 7, 2025, 12_15_06 PM.png')",
+            backgroundImage: "url('/assets/images/Blossoming Birds Timberlea.jpeg')",
+            backgroundRepeat: 'repeat',
+            backgroundSize: 'auto',
+            backgroundPosition: 'center',
             imageRendering: '-webkit-optimize-contrast',
             WebkitBackfaceVisibility: 'hidden',
             MozBackfaceVisibility: 'hidden',
             WebkitTransform: 'translate3d(0, 0, 0)',
-            MozTransform: 'translate3d(0, 0, 0)'
+            MozTransform: 'translate3d(0, 0, 0)',
+                    // filter: 'grayscale(100%)'
+
           } as React.CSSProperties}
         />
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* Main content container - aligned to left */}
-      <div className="relative z-10 w-full h-full flex items-center justify-start p-4 md:p-6 md:pl-12 lg:pl-20">
+      {/* Main content container - centered */}
+      <div className="relative z-10 w-full h-full flex items-center justify-center p-4 md:p-6">
         <div className="relative w-full max-w-2xl flex flex-col items-center justify-center">
           {/* Rectangular Box */}
           <div className="relative w-full max-w-[95vw] md:max-w-full aspect-[3/4] md:aspect-[4/3] max-h-[60vh] md:max-h-[70vh] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white/20 shadow-2xl">
@@ -40,8 +45,10 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ 
-                backgroundImage: "url(/assets/images/IMG-20251107-WA0018.jpg)",
-                imageRendering: '-webkit-optimize-contrast'
+                backgroundImage: "url(/assets/images/IMG2025-11-hero.jpg)",
+                imageRendering: '-webkit-optimize-contrast',
+                    // filter: 'grayscale(100%)'
+
               }}
             />
             {/* Dark overlay */}
@@ -54,8 +61,9 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
                   style={{ 
-                    backgroundImage: "url(/assets/images/IMG-20251107-WA0018.jpg)",
-                    imageRendering: '-webkit-optimize-contrast'
+                    backgroundImage: "url(/assets/images/IMG2025-11-hero.jpg)",
+                    imageRendering: '-webkit-optimize-contrast',
+                    // filter: 'grayscale(50%)'
                   }}
                 />
                 {/* Circle overlay */}
@@ -69,18 +77,29 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif italic">Ihsan</h1>
                   
                   {/* Date/Time Card inside circle */}
-                  <div className="card-glass rounded-xl md:rounded-2xl border border-white/30 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 mt-3 sm:mt-4 md:mt-6">
-                    <div className="flex items-center justify-center gap-3 sm:gap-4 text-xs md:text-sm">
+                  <div className="card-glass rounded-md md:rounded-lg border border-white/30 px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 mt-3 sm:mt-4 md:mt-6">
+                    <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
+                      {/* Day */}
                       <div className="text-center">
-                        <div className="text-[10px] sm:text-xs uppercase opacity-80">Sat</div>
+                        <div className="text-[7px] sm:text-[8px] uppercase tracking-wide opacity-70">Saturday</div>
                       </div>
+                      
+                      {/* Divider */}
+                      <div className="h-6 sm:h-7 w-px bg-white/30"></div>
+                      
+                      {/* Date */}
                       <div className="text-center">
-                        <div className="text-[10px] sm:text-xs uppercase opacity-80">Dec</div>
-                        <div className="text-2xl sm:text-3xl font-bold">06</div>
-                        <div className="text-[10px] sm:text-xs">2025</div>
+                        <div className="text-lg sm:text-xl md:text-2xl font-bold leading-none">06</div>
+                        <div className="text-[6px] sm:text-[7px] uppercase tracking-wider opacity-80">Dec 2025</div>
                       </div>
+                      
+                      {/* Divider */}
+                      <div className="h-6 sm:h-7 w-px bg-white/30"></div>
+                      
+                      {/* Time */}
                       <div className="text-center">
-                        <div className="text-[10px] sm:text-xs uppercase opacity-80">10:00</div>
+                        <div className="text-xs sm:text-sm md:text-base font-semibold">10:00</div>
+                        <div className="text-[6px] sm:text-[7px] uppercase tracking-wide opacity-70">AM</div>
                       </div>
                     </div>
                   </div>
@@ -94,7 +113,7 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
           </div>
 
           {/* Guest invitation card below */}
-          <div className="card-glass mx-auto mt-4 sm:mt-5 md:mt-6 w-full max-w-md p-4 sm:p-5 md:p-6 rounded-xl md:rounded-2xl">
+          <div className="mx-auto mt-4 sm:mt-5 md:mt-6 w-full max-w-md p-4 sm:p-5 md:p-6 rounded-xl md:rounded-2xl" style={{ backgroundColor: "hsl(24.71deg 10.95% 54.41% / 62%)" }}>
             <p className="text-xs sm:text-sm opacity-80">Kepada Yth.</p>
             <p className="mt-1 text-[10px] sm:text-xs opacity-70">Bapak/Ibu/Saudara/i :</p>
             <p className="mt-2 sm:mt-3 text-xl sm:text-2xl font-serif">{guestName || "Guest Name"}</p>

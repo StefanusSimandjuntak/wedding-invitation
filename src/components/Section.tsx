@@ -15,8 +15,15 @@ export default function Section({ id, bgImage, nextId, contentClassName, section
       {bgImage && (
         <>
           <div
-            className="absolute inset-0 -z-10 bg-cover bg-center"
-            style={{ backgroundImage: `url(${bgImage})` }}
+            className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              backgroundImage: `url(${bgImage})`,
+              imageRendering: '-webkit-optimize-contrast',
+              WebkitBackfaceVisibility: 'hidden',
+              MozBackfaceVisibility: 'hidden',
+              WebkitTransform: 'translate3d(0, 0, 0)',
+              MozTransform: 'translate3d(0, 0, 0)'
+            } as React.CSSProperties}
           />
           <div className="absolute inset-0 -z-10 bg-black/55" />
         </>

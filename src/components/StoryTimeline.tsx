@@ -7,22 +7,25 @@ export default function StoryTimeline() {
       id: 1,
       date: "2013",
       title: "First Meeting",
-      description: "It all began back in 2013, when our paths first crossed during our school days. What started as a simple friendship slowly blossomed into something beautiful — a love story that truly began in 2015, when we chose to walk hand in hand through the journey of life.",
-      image: "/assets/images/IMG-20251107-WA0010.jpg",
+      description: "Semua bermula pada tahun 2013, saat langkah kita pertama kali dipertemukan di masa sekolah. Dari pertemanan sederhana yang tumbuh seiring waktu, tercipta ikatan yang hangat dan bermakna — sebuah perjalanan indah yang berlanjut hingga tahun 2015, ketika kita memilih untuk saling mendukung dan berjalan bersama menapaki setiap bab kehidupan.",
+      image1: "/assets/images/IMG-20251107-WA0010.jpg",
+      image2: "/assets/images/IMG-20251107-WA0012.jpg",
     },
     {
       id: 2,
       date: "July 20, 2025",
       title: "Engagement",
-      description: "After years of growing together, sharing dreams, and facing challenges side by side, we took another meaningful step — seeking blessings and celebrating our engagement in July 2025.",
-      image: "/assets/images/IMG-20251107-WA0011.jpg",
+      description: "Setelah bertahun-tahun berjalan beriringan — tumbuh bersama, saling menguatkan, dan merangkai mimpi dalam satu langkah — kami akhirnya tiba pada momen penuh makna. Pada bulan Juli 2025, dengan hati yang dipenuhi syukur, kami memohon restu dan merayakan pertunangan kami sebagai awal dari kisah yang semakin indah.",
+      image1: "/assets/images/IMG-20251107-WA0030.jpg",
+      image2: "/assets/images/IMG-20251107-WA0017.jpg",
     },
     {
       id: 3,
       date: "December 06, 2025",
       title: "Wedding",
-      description: "Now, with hearts full of gratitude and hope, we are ready to begin a new chapter — the beginning of our lifelong journey as husband and wife, in December 2025.",
-      image: "/assets/images/IMG-20251107-WA0012.jpg",
+      description: "Dengan hati yang sarat syukur dan dipenuhi harapan, kami menatap hari ini sebagai momen sakral untuk memulai perjalanan seumur hidup bersama. Di bulan Desember 2025, dua jiwa yang telah tumbuh dan saling melengkapi, kini bersatu dalam ikatan suci sebagai suami dan istri, menapaki hari-hari penuh cinta, tawa, dan cerita yang akan kita rajut selamanya.",
+      image1: "/assets/images/IMG-20251107-WA0036.jpg",
+      image2: "/assets/images/IMG-20251107-WA0033.jpg",
     },
   ];
 
@@ -49,13 +52,39 @@ export default function StoryTimeline() {
               {/* Content */}
               <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                 <div className="card-glass p-6 md:p-8 text-center text-white">
-                  <div className="relative overflow-hidden rounded-[var(--radius)] mb-6">
-                    <div
-                      className="aspect-video bg-cover bg-center"
-                      style={{ backgroundImage: `url(${event.image})` }}
-                    />
-                    <div className="absolute inset-0 bg-black/20" />
+                  {/* Two images side by side with blur background */}
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {/* Left Image */}
+                    <div className="relative overflow-hidden rounded-[var(--radius)] aspect-[3/4]">
+                      {/* Blurred background layer */}
+                      <div
+                        className="absolute inset-0 bg-cover bg-center scale-110 blur-2xl"
+                        style={{ backgroundImage: `url(${event.image1})` }}
+                      />
+                      {/* Main image layer - centered and contained */}
+                      <div
+                        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+                        style={{ backgroundImage: `url(${event.image1})` }}
+                      />
+                      <div className="absolute inset-0 bg-black/20" />
+                    </div>
+                    
+                    {/* Right Image */}
+                    <div className="relative overflow-hidden rounded-[var(--radius)] aspect-[3/4]">
+                      {/* Blurred background layer */}
+                      <div
+                        className="absolute inset-0 bg-cover bg-center scale-110 blur-2xl"
+                        style={{ backgroundImage: `url(${event.image2})` }}
+                      />
+                      {/* Main image layer - centered and contained */}
+                      <div
+                        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+                        style={{ backgroundImage: `url(${event.image2})` }}
+                      />
+                      <div className="absolute inset-0 bg-black/20" />
+                    </div>
                   </div>
+                  
                   <div className="text-sm opacity-80 mb-2">{event.date}</div>
                   <h3 className="text-2xl font-serif font-bold mb-4">{event.title}</h3>
                   <p className="opacity-90 leading-relaxed">{event.description}</p>

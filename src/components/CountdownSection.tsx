@@ -31,7 +31,7 @@ export default function CountdownSection() {
     <Section id="countdown" bgImage="/assets/images/IMG-20251107-WA0020.jpg" nextId="rsvp" contentClassName="animate-slide-in-right">
       <div className="mx-auto max-w-2xl text-center">
         <div className="card-glass p-8">
-          <div className="mx-auto mb-6 h-44 w-full max-w-md overflow-hidden rounded-2xl">
+          <div className="mx-auto mb-6 h-64 w-full max-w-md overflow-hidden rounded-2xl">
             <Image src="/assets/images/IMG-20251107-WA0021.jpg" alt="venue" width={900} height={400} className="h-full w-full object-cover" />
           </div>
           <h3 className="mb-4 text-2xl font-serif">Wedding Countdown</h3>
@@ -56,7 +56,9 @@ export default function CountdownSection() {
               <h4 className="text-2xl font-serif">Akad</h4>
               <p className="mt-2 opacity-90">Saturday, December 6, 2025</p>
               <p className="opacity-90">Jam: 10:00 - 11:00</p>
-              <p className="mt-2 font-semibold">Lapangan Rumah Manca</p>
+              <p className="mt-2 font-semibold">Lapangan Bulu Tangkis</p>
+              <br /><hr />
+              <p className="mt-2">Taman Wisma Asri 2, Blok U 27, Jl. Cempaka XII RT. 007/030, Teluk Pucung, Bekasi Utara, Kota Bekasi</p>
               
             </div>
             <div className="relative text-center">
@@ -68,8 +70,9 @@ export default function CountdownSection() {
                 <h4 className="text-2xl font-serif">Resepsi</h4>
                 <p className="mt-2 opacity-90">Saturday, December 6, 2025</p>
                 <p className="opacity-90">Jam: 11:00 - Selesai</p>
-                <p className="mt-2 font-semibold">Lapangan Rumah Manca</p>
-                
+                <p className="mt-2 font-semibold">Lapangan Bulu Tangkis</p>
+                <br /><hr />
+              <p className="mt-2">Taman Wisma Asri 2, Blok U 27, Jl. Cempaka XII RT. 007/030, Teluk Pucung, Bekasi Utara, Kota Bekasi</p>
               </div>
             </div>
           </div>
