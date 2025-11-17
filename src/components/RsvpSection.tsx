@@ -112,7 +112,7 @@ export default function RsvpSection() {
   };
 
   return (
-    <Section id="rsvp" bgImage="/assets/images/WhatsApp%20Image%202025-11-07%20at%2012.58.37_80443ac7.jpg" nextId="gallery" contentClassName="animate-slide-in-left">
+    <Section id="rsvp" bgImage="/assets/images/WhatsApp%20Image%202025-11-07%20at%2012.58.37_80443ac7.jpg" nextId="gallery" contentClassName="animate-slide-in-left" blurBg>
       <div className="card-glass p-6 md:p-10">
         <h2 className="title text-center">RSVP & Wishes</h2>
         

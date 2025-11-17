@@ -17,7 +17,7 @@ export default function Section({ id, bgImage, nextId, contentClassName, section
       {bgImage && (
         <>
           <div
-            className={`absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat ${blurBg ? 'blur-md' : ''}`}
+            className={`absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat ${blurBg ? 'blur-sm' : ''}`}
             style={{ 
               backgroundImage: `url(${bgImage})`,
               transform: bgZoom ? `scale(${bgZoom})` : undefined,

@@ -4,7 +4,7 @@ import Section from "@/components/Section";
 
 export default function QuoteSection() {
   return (
-    <Section id="quote" bgImage="/assets/images/IMG-20251107-WA0014.jpg" nextId="dresscode" contentClassName="animate-fade-in-up">
+    <Section id="quote" bgImage="/assets/images/IMG-20251107-WA0014.jpg" nextId="dresscode" contentClassName="animate-fade-in-up" blurBg>
       <div className="mx-auto max-w-xl text-center">
         <div className="card-glass p-6 md:p-10">
           {/* <div className="mx-auto mb-6 h-64 w-44 overflow-hidden rounded-[2rem]">

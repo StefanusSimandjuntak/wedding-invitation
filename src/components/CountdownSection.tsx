@@ -28,7 +28,7 @@ function useCountdown(target: string): TimeLeft {
 export default function CountdownSection() {
   const time = useCountdown("2025-12-06T09:00:00+07:00");
   return (
-    <Section id="countdown" bgImage="/assets/images/IMG-20251107-WA0020.jpg" nextId="rsvp" contentClassName="animate-slide-in-right">
+    <Section id="countdown" bgImage="/assets/images/IMG-20251107-WA0020.jpg" nextId="rsvp" contentClassName="animate-slide-in-right" blurBg>
       <div className="mx-auto max-w-2xl text-center">
         <div className="card-glass p-8">
           <div className="mx-auto mb-6 h-65 w-full max-w-md overflow-hidden rounded-2xl">

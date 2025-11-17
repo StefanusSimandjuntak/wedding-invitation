@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 
 export default function DresscodeSection() {
   return (
-    <Section id="dresscode" bgImage="/assets/images/IMG-20251107-WA0014.jpg" nextId="countdown" contentClassName="animate-zoom-in">
+    <Section id="dresscode" bgImage="/assets/images/IMG-20251107-WA0014.jpg" nextId="countdown" contentClassName="animate-zoom-in" blurBg>
       <div className="text-center">
         <h2 className="title">DRESS CODE</h2>
         <p className="subtitle mt-4">We respectfully request our guests to wear the following colors:</p>
