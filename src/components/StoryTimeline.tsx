@@ -30,7 +30,7 @@ export default function StoryTimeline() {
   ];
 
   return (
-    <Section id="story" bgImage="/assets/images/IMG-20251107-WA0019.jpg" nextId="gallery" contentClassName="animate-fade-in">
+    <Section id="story" bgImage="/assets/images/IMG-20251107-WA0019.jpg" nextId="gallery" contentClassName="animate-fade-in" blurBg>
       <div className="text-center mb-12">
         <h2 className="title text-4xl md:text-5xl">Our Love Story</h2>
         <div className="mt-4 h-px w-24 mx-auto bg-white/30" />

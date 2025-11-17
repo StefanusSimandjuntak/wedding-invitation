@@ -4,7 +4,7 @@ import Section from "@/components/Section";
 
 export default function CoupleSection() {
   return (
-    <Section id="couple" bgImage="/assets/images/Blossoming Birds Timberlea.jpeg" nextId="quote" contentClassName="animate-fade-in">
+    <Section id="couple" bgImage="/assets/images/IMG-20251107-WA0014.jpg" nextId="quote" contentClassName="animate-fade-in">
       <div className="grid gap-10 md:grid-cols-2">
         <div className="relative overflow-hidden rounded-[var(--radius)]">
           <div className="absolute inset-0 bg-cover bg-center scaBlossoming Birds Timberleale-e105" style={{ backgroundImage: "url(/assets/images/6.jpg)" }} />

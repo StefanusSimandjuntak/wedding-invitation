@@ -9,7 +9,7 @@ export default function ThanksSection() {
           <p className="text-lg md:text-xl opacity-90 text-white leading-relaxed mb-8">
             Your presence and blessings are the most beautiful gift for us
           </p>
-          <h2 className="title text-3xl md:text-4xl">Manca & Ihsan</h2>
+          <h2 className="title text-3xl md:text-4xl">Manca <br />&<br /> Ihsan</h2>
         </div>
       </div>
     </Section>

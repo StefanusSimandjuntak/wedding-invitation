@@ -7,6 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Wedding Of Manca & Ihsan",
   description: "Join us in celebrating the wedding of Manca & Ihsan. Find event details, RSVP, and more.",
+  icons: {
+    icon: '/assets/images/IMG-20251107-WA0030.jpg',
+    shortcut: '/assets/images/IMG-20251107-WA0030.jpg',
+    apple: '/assets/images/IMG-20251107-WA0030.jpg',
+  },
 };
 
 export default function RootLayout({

@@ -6,16 +6,17 @@ type SectionProps = {
   nextId?: string;
   contentClassName?: string;
   sectionRef?: React.MutableRefObject<HTMLElement | null>;
+  blurBg?: boolean;
   children: React.ReactNode;
 };
 
-export default function Section({ id, bgImage, nextId, contentClassName, sectionRef, children }: SectionProps) {
+export default function Section({ id, bgImage, nextId, contentClassName, sectionRef, blurBg, children }: SectionProps) {
   return (
     <section id={id} ref={sectionRef as any} className="relative min-h-screen flex items-center py-20">
       {bgImage && (
         <>
           <div
-            className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+            className={`absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat ${blurBg ? 'blur-md' : ''}`}
             style={{ 
               backgroundImage: `url(${bgImage})`,
               imageRendering: '-webkit-optimize-contrast',
