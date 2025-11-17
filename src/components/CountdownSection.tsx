@@ -33,7 +33,16 @@ export default function CountdownSection() {
         <div className="card-glass p-8">
           <div className="mx-auto mb-6 h-65 w-full max-w-md overflow-hidden rounded-2xl">
             <div className="h-full w-full  transition-transform duration-700 origin-center">
-              <Image src="/assets/images/IMG-20251107-WA0016.jpg" alt="venue" width={900} height={400} className="h-full w-full object-cover" />
+              <Image 
+                src="/assets/images/IMG-20251107-WA0016.jpg" 
+                alt="venue" 
+                width={900} 
+                height={400} 
+                className="h-full w-full object-cover" 
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+              />
             </div>
           </div>
           <h3 className="mb-4 text-2xl font-serif">Wedding Countdown</h3>

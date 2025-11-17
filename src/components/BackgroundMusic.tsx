@@ -5,22 +5,34 @@ import React, { useEffect, useRef, useState } from "react";
 export default function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
-    // Try to autoplay when component mounts
-    const playAudio = async () => {
-      if (audioRef.current) {
+    // Only try autoplay after user interaction
+    const handleFirstInteraction = async () => {
+      if (!hasInteracted && audioRef.current) {
         try {
           await audioRef.current.play();
           setIsPlaying(true);
+          setHasInteracted(true);
         } catch (error) {
-          // Autoplay was prevented, user interaction required
-          console.log("Autoplay prevented:", error);
+          // Autoplay was prevented, will require manual play
         }
       }
     };
-    playAudio();
-  }, []);
+
+    // Listen for any user interaction
+    const events = ['click', 'touchstart', 'keydown'];
+    events.forEach(event => {
+      document.addEventListener(event, handleFirstInteraction, { once: true });
+    });
+
+    return () => {
+      events.forEach(event => {
+        document.removeEventListener(event, handleFirstInteraction);
+      });
+    };
+  }, [hasInteracted]);
 
   const togglePlay = async () => {
     if (audioRef.current) {
