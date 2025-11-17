@@ -11,7 +11,7 @@ export default function CoupleSection() {
           <div className="relative z-10 card-glass m-6 md:m-10 p-8 md:p-10 text-center text-white">
             <h2 className="title">Manca</h2>
             <div className="my-4 h-px w-24 mx-auto bg-white/30" />
-            <p className="opacity-90 text-white text-sm">Dewi Manca Indira, S. Ars.</p>
+            <p className="opacity-90 text-white text-sm">Dewi Manca Indira, S. Ars</p>
             <p className="mt-2 opacity-80 text-xs">Putri pertama dari</p>
             <p className="mt-1 opacity-80 text-xs">Bpk. Sartono & Ibu Mela Asriyah</p>
             <a

@@ -39,9 +39,18 @@ export default function RsvpSection() {
   const fetchRsvps = async () => {
     try {
       const response = await fetch('/api/rsvp');
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Failed to fetch RSVPs' }));
+        console.error('Error fetching RSVPs:', errorData.error);
+        return;
+      }
+      
       const data = await response.json();
       if (data.success) {
         setRsvps(data.data);
+      } else {
+        console.error('Error fetching RSVPs:', data.error);
       }
     } catch (error) {
       console.error('Error fetching RSVPs:', error);
