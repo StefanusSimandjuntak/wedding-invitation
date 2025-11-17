@@ -41,7 +41,7 @@ export default function BackgroundMusic() {
   return (
     <>
       <audio ref={audioRef} loop>
-        <source src="/assets/Teddy Swims - You're Still The One (Shania Twain Cover).mp3" type="audio/mpeg" />
+        <source src="/assets/bg-sound.mp3" type="audio/mpeg" />
       </audio>
       
       {/* Floating music control button */}

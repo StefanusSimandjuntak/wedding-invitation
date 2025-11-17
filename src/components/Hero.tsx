@@ -45,7 +45,7 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ 
-                backgroundImage: "url(/assets/images/IMG2025-11-hero.jpg)",
+                backgroundImage: "url(/assets/images/WhatsApp-Image-heroo.jpg)",
                 imageRendering: '-webkit-optimize-contrast',
                     // filter: 'grayscale(100%)'
 
@@ -61,7 +61,7 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
                   style={{ 
-                    backgroundImage: "url(/assets/images/IMG2025-11-hero.jpg)",
+                    backgroundImage: "url(/assets/images/WhatsApp-Image-heroo.jpg)",
                     imageRendering: '-webkit-optimize-contrast',
                     // filter: 'grayscale(50%)'
                   }}
@@ -104,9 +104,9 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
                     </div>
                   </div>
                   
-                  <div className="text-[10px] sm:text-xs md:text-sm opacity-90 mt-1 sm:mt-2">
+                  {/* <div className="text-[10px] sm:text-xs md:text-sm opacity-90 mt-1 sm:mt-2">
                     Lapangan Rumah Manca
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
