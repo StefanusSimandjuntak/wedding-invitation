@@ -1,9 +1,32 @@
 import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+
+// Lazy load Prisma to handle import errors gracefully
+async function getPrisma() {
+  try {
+    const { prisma } = await import('@/lib/prisma');
+    return prisma;
+  } catch (error) {
+    console.error('Failed to import Prisma Client:', error);
+    return null;
+  }
+}
 
 // GET - Fetch all RSVPs
 export async function GET() {
   try {
+    const prisma = await getPrisma();
+    
+    // Check if Prisma Client is available
+    if (!prisma) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          error: 'Database not configured. Please set DATABASE_URL and run: npx prisma generate && npx prisma migrate dev' 
+        },
+        { status: 500 }
+      );
+    }
+
     // Check if DATABASE_URL is set
     if (!process.env.DATABASE_URL) {
       console.error('DATABASE_URL is not set');
@@ -49,6 +72,19 @@ export async function GET() {
 // POST - Create new RSVP
 export async function POST(request: Request) {
   try {
+    const prisma = await getPrisma();
+    
+    // Check if Prisma Client is available
+    if (!prisma) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          error: 'Database not configured. Please set DATABASE_URL and run: npx prisma generate && npx prisma migrate dev' 
+        },
+        { status: 500 }
+      );
+    }
+
     // Check if DATABASE_URL is set
     if (!process.env.DATABASE_URL) {
       console.error('DATABASE_URL is not set');
