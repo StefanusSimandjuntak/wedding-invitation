@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 
 export default function TitleStripeSection({ sectionRef }: { sectionRef?: React.MutableRefObject<HTMLElement | null> }) {
   return (
-    <Section id="title" sectionRef={sectionRef} bgImage="/assets/images/WhatsApp%20Image%202025-11-07%20at%2012.58.37_80443ac7.jpg" nextId="couple" contentClassName="animate-zoom-in">
+    <Section id="title" sectionRef={sectionRef} bgImage="/assets/images/8.jpg" nextId="couple" contentClassName="animate-zoom-in">
       <div className="flex justify-center">
         <div className="relative flex items-center gap-6 text-white">
           <div className="flex flex-col items-center animate-slide-in-left">
@@ -14,9 +14,9 @@ export default function TitleStripeSection({ sectionRef }: { sectionRef?: React.
           <div className="relative px-8 py-6 animate-slide-in-right">
             <div className="pointer-events-none absolute inset-0 border-2 border-white/80" />
             <div className="relative z-10 text-center font-serif font-bold leading-tight">
-              <div className="text-5xl md:text-6xl">Manca</div>
-              <div className="text-5xl md:text-6xl">&</div>
-              <div className="text-5xl md:text-6xl">Ihsan</div>
+              <div className="text-5xl md:text-6xl mt-2 mb-2">Manca</div>
+              <div className="text-5xl md:text-6xl my-2">&</div>
+              <div className="text-5xl md:text-6xl mt-2 mb-2">Ihsan</div>
             </div>
           </div>
         </div>
