@@ -31,8 +31,10 @@ export default function CountdownSection() {
     <Section id="countdown" bgImage="/assets/images/IMG-20251107-WA0020.jpg" nextId="rsvp" contentClassName="animate-slide-in-right">
       <div className="mx-auto max-w-2xl text-center">
         <div className="card-glass p-8">
-          <div className="mx-auto mb-6 h-64 w-full max-w-md overflow-hidden rounded-2xl">
-            <Image src="/assets/images/IMG-20251107-WA0021.jpg" alt="venue" width={900} height={400} className="h-full w-full object-cover" />
+          <div className="mx-auto mb-6 h-65 w-full max-w-md overflow-hidden rounded-2xl">
+            <div className="h-full w-full  transition-transform duration-700 origin-center">
+              <Image src="/assets/images/IMG-20251107-WA0021.jpg" alt="venue" width={900} height={400} className="h-full w-full object-cover" />
+            </div>
           </div>
           <h3 className="mb-4 text-2xl font-serif">Wedding Countdown</h3>
           <div className="grid grid-cols-4 gap-4">
