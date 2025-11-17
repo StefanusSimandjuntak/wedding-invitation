@@ -7,10 +7,11 @@ type SectionProps = {
   contentClassName?: string;
   sectionRef?: React.MutableRefObject<HTMLElement | null>;
   blurBg?: boolean;
+  bgZoom?: number;
   children: React.ReactNode;
 };
 
-export default function Section({ id, bgImage, nextId, contentClassName, sectionRef, blurBg, children }: SectionProps) {
+export default function Section({ id, bgImage, nextId, contentClassName, sectionRef, blurBg, bgZoom, children }: SectionProps) {
   return (
     <section id={id} ref={sectionRef as any} className="relative min-h-screen flex items-center py-20">
       {bgImage && (
@@ -19,11 +20,12 @@ export default function Section({ id, bgImage, nextId, contentClassName, section
             className={`absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat ${blurBg ? 'blur-md' : ''}`}
             style={{ 
               backgroundImage: `url(${bgImage})`,
+              transform: bgZoom ? `scale(${bgZoom})` : undefined,
               imageRendering: '-webkit-optimize-contrast',
               WebkitBackfaceVisibility: 'hidden',
               MozBackfaceVisibility: 'hidden',
-              WebkitTransform: 'translate3d(0, 0, 0)',
-              MozTransform: 'translate3d(0, 0, 0)'
+              WebkitTransform: bgZoom ? `translate3d(0, 0, 0) scale(${bgZoom})` : 'translate3d(0, 0, 0)',
+              MozTransform: bgZoom ? `translate3d(0, 0, 0) scale(${bgZoom})` : 'translate3d(0, 0, 0)'
             } as React.CSSProperties}
           />
           <div className="absolute inset-0 -z-10 bg-black/55" />
