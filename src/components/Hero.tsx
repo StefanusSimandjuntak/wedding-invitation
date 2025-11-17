@@ -114,8 +114,8 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
 
           {/* Guest invitation card below */}
           <div className="mx-auto mt-4 sm:mt-5 md:mt-6 w-full max-w-md p-4 sm:p-5 md:p-6 rounded-xl md:rounded-2xl" style={{ backgroundColor: "hsl(24.71deg 10.95% 54.41% / 62%)" }}>
-            <p className="text-xs sm:text-sm opacity-80">Kepada Yth.</p>
-            <p className="mt-1 text-[10px] sm:text-xs opacity-70">Bapak/Ibu/Saudara/i :</p>
+            <p className="text-xs sm:text-sm opacity-80">To</p>
+            <p className="mt-1 text-[10px] sm:text-xs opacity-70">Mr./Mrs./Brother/Sister:</p>
             <p className="mt-2 sm:mt-3 text-xl sm:text-2xl font-serif">{guestName || "Guest Name"}</p>
             <button
               onClick={() => {
@@ -128,7 +128,7 @@ export default function Hero({ opened, setOpened, firstSectionRef, nextId, guest
               }}
               className="mt-3 sm:mt-4 inline-flex items-center justify-center rounded-xl border border-white/30 bg-white/10 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm hover:bg-white/20 transition-all"
             >
-              Buka Undangan
+              Open Invitation
             </button>
           </div>
         </div>

@@ -4,16 +4,16 @@ import Section from "@/components/Section";
 
 export default function CoupleSection() {
   return (
-    <Section id="couple" bgImage="/assets/images/IMG-20251107-WA0013.jpg" nextId="quote" contentClassName="animate-fade-in">
+    <Section id="couple" bgImage="/assets/images/Blossoming Birds Timberlea.jpeg" nextId="quote" contentClassName="animate-fade-in">
       <div className="grid gap-10 md:grid-cols-2">
         <div className="relative overflow-hidden rounded-[var(--radius)]">
-          <div className="absolute inset-0 bg-cover bg-center scale-105" style={{ backgroundImage: "url(/assets/images/6.jpg)" }} />
+          <div className="absolute inset-0 bg-cover bg-center scaBlossoming Birds Timberleale-e105" style={{ backgroundImage: "url(/assets/images/6.jpg)" }} />
           <div className="relative z-10 card-glass m-6 md:m-10 p-8 md:p-10 text-center text-white">
             <h2 className="title">Manca</h2>
             <div className="my-4 h-px w-24 mx-auto bg-white/30" />
             <p className="opacity-90 text-white text-sm">Dewi Manca Indira, S. Ars</p>
-            <p className="mt-2 opacity-80 text-xs">Putri pertama dari</p>
-            <p className="mt-1 opacity-80 text-xs">Bpk. Sartono & Ibu Mela Asriyah</p>
+            <p className="mt-2 opacity-80 text-xs">First Daughter of</p>
+            <p className="mt-1 opacity-80 text-xs">Mr. Sartono & Mrs. Mela Asriyah</p>
             <a
               className="mt-6 inline-flex items-center gap-2 rounded-xl border border-white/30 px-4 py-2 text-sm opacity-90 hover:bg-white/10"
               href="https://instagram.com/dewi_indira"
@@ -34,8 +34,8 @@ export default function CoupleSection() {
             <h2 className="title">Ihsan</h2>
             <div className="my-4 h-px w-24 mx-auto bg-white/30" />
             <p className="opacity-90 text-white text-sm">Ihsan Taqwa, S.T</p>
-            <p className="mt-2 opacity-80 text-xs">Putra ketiga dari</p>
-            <p className="mt-1 opacity-80 text-xs">Alm. Bpk Ir. H. Aom Mukarom & <br></br> Ibu Hj. Dewi Krisnani</p>
+            <p className="mt-2 opacity-80 text-xs">Third Son of</p>
+            <p className="mt-1 opacity-80 text-xs">Late Mr. Ir. H. Aom Mukarom <br /> & <br /> Mrs. Hj. Dewi Krisnani</p>
             <a
               className="mt-6 inline-flex items-center gap-2 rounded-xl border border-white/30 px-4 py-2 text-sm opacity-90 hover:bg-white/10"
               href="https://instagram.com/ihsan_taqwa29"

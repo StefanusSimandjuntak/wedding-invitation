@@ -26,9 +26,9 @@ export default function RsvpSection() {
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const attendanceOptions: SelectOption[] = [
-    { value: "Hadir", label: "Hadir" },
-    { value: "Tidak Hadir", label: "Tidak Hadir" },
-    { value: "Masih Ragu", label: "Masih Ragu" },
+    { value: "Attending", label: "Attending" },
+    { value: "Not Attending", label: "Not Attending" },
+    { value: "Maybe", label: "Maybe" },
   ];
 
   // Fetch RSVPs on component mount
@@ -61,7 +61,7 @@ export default function RsvpSection() {
     e.preventDefault();
     
     if (!name || !attendance) {
-      alert('Nama dan kehadiran harus diisi!');
+      alert('Name and attendance are required!');
       return;
     }
 
@@ -90,11 +90,11 @@ export default function RsvpSection() {
         // Hide success message after 3 seconds
         setTimeout(() => setSubmitSuccess(false), 3000);
       } else {
-        alert('Gagal mengirim RSVP: ' + data.error);
+        alert('Failed to send RSVP: ' + data.error);
       }
     } catch (error) {
       console.error('Error submitting RSVP:', error);
-      alert('Terjadi kesalahan. Silakan coba lagi.');
+      alert('An error occurred. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -114,7 +114,7 @@ export default function RsvpSection() {
   return (
     <Section id="rsvp" bgImage="/assets/images/WhatsApp%20Image%202025-11-07%20at%2012.58.37_80443ac7.jpg" nextId="gallery" contentClassName="animate-slide-in-left">
       <div className="card-glass p-6 md:p-10">
-        <h2 className="title text-center">RSVP & Ucapan</h2>
+        <h2 className="title text-center">RSVP & Wishes</h2>
         
         <form onSubmit={handleSubmit} className="mt-8 grid gap-6 md:grid-cols-2">
           <input
@@ -122,14 +122,14 @@ export default function RsvpSection() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="w-full rounded-xl bg-white/10 px-4 py-3 placeholder-white/60 outline-none focus:ring-2 focus:ring-white/30"
-            placeholder="Nama"
+            placeholder="Name"
             required
           />
           <Select
             value={attendance}
             onChange={(option) => setAttendance(option)}
             options={attendanceOptions}
-            placeholder="Pilih Kehadiran"
+            placeholder="Select Attendance"
             isClearable
             className="react-select-container"
             classNamePrefix="react-select"
@@ -201,7 +201,7 @@ export default function RsvpSection() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className="md:col-span-2 min-h-28 rounded-xl bg-white/10 px-4 py-3 placeholder-white/60 outline-none focus:ring-2 focus:ring-white/30"
-            placeholder="Berikan Ucapan"
+            placeholder="Leave a Message"
           />
           <div className="md:col-span-2 flex items-center gap-4">
             <button
@@ -209,17 +209,17 @@ export default function RsvpSection() {
               disabled={loading}
               className="rounded-xl border border-white/30 bg-white/10 px-6 py-3 text-sm hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
-              {loading ? 'Mengirim...' : 'Kirim Ucapan'}
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
             {submitSuccess && (
-              <span className="text-sm text-green-300">✓ Ucapan berhasil dikirim!</span>
+              <span className="text-sm text-green-300">✓ Message sent successfully!</span>
             )}
           </div>
         </form>
 
         <div className="mt-10 space-y-6 max-h-96 overflow-y-auto">
           {rsvps.length === 0 ? (
-            <p className="text-center opacity-60 py-8">Belum ada ucapan</p>
+            <p className="text-center opacity-60 py-8">No messages yet</p>
           ) : (
             rsvps.map((rsvp) => (
               <div key={rsvp.id} className="flex items-start justify-between gap-4 rounded-xl bg-white/5 p-4">
@@ -231,8 +231,8 @@ export default function RsvpSection() {
                   <p className="mt-2 text-xs opacity-70">{formatDate(rsvp.createdAt)}</p>
                 </div>
                 <span className={`rounded-full px-3 py-1 text-xs whitespace-nowrap ${
-                  rsvp.attendance === 'Hadir' ? 'bg-green-500/20 text-green-300' :
-                  rsvp.attendance === 'Tidak Hadir' ? 'bg-red-500/20 text-red-300' :
+                  rsvp.attendance === 'Attending' ? 'bg-green-500/20 text-green-300' :
+                  rsvp.attendance === 'Not Attending' ? 'bg-red-500/20 text-red-300' :
                   'bg-yellow-500/20 text-yellow-300'
                 }`}>
                   {rsvp.attendance}

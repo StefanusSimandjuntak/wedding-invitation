@@ -47,7 +47,7 @@ export default function CountdownSection() {
           </div>
           {/* <div className="my-6 h-px w-full bg-white/20" />
             <h4 className="text-2xl font-serif">Resepsi</h4>
-            <p className="mt-2 opacity-90">Saturday, December 6, 2025</p>
+            <p className="mt-2 opacity-90">Sabtu, Desember 6, 2025</p>
             <p className="opacity-90">Jam: 11:00 - Selesai</p>
             <p className="mt-2 font-semibold">Gedung Pemuda Ambarawa</p>
             <a href="#" className="mt-5 inline-flex items-center justify-center rounded-xl border border-white/30 bg-white/10 px-5 py-3 text-sm hover:bg-white/20">Watch Live Wedding</a> */}
@@ -55,9 +55,9 @@ export default function CountdownSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="text-center">
               <div className="my-6 h-px w-full bg-white/20" />
-              <h4 className="text-2xl font-serif">Akad</h4>
+              <h4 className="text-2xl font-serif">Ceremony</h4>
               <p className="mt-2 opacity-90">Saturday, December 6, 2025</p>
-              <p className="opacity-90">Jam: 10:00 - 11:00</p>
+              <p className="opacity-90">Time: 10:00 - 11:00</p>
               <p className="mt-2 font-semibold">Lapangan Bulu Tangkis</p>
               <br /><hr />
               <p className="mt-2">Taman Wisma Asri 2, Blok U 27, Jl. Cempaka XII RT. 007/030, Teluk Pucung, Bekasi Utara, Kota Bekasi</p>
@@ -69,9 +69,9 @@ export default function CountdownSection() {
               </div>
               <div className="relative z-10">
                 <div className="my-6 h-px w-full bg-white/20" />
-                <h4 className="text-2xl font-serif">Resepsi</h4>
+                <h4 className="text-2xl font-serif">Reception</h4>
                 <p className="mt-2 opacity-90">Saturday, December 6, 2025</p>
-                <p className="opacity-90">Jam: 11:00 - Selesai</p>
+                <p className="opacity-90">Time: 11:00 - Until End</p>
                 <p className="mt-2 font-semibold">Lapangan Bulu Tangkis</p>
                 <br /><hr />
               <p className="mt-2">Taman Wisma Asri 2, Blok U 27, Jl. Cempaka XII RT. 007/030, Teluk Pucung, Bekasi Utara, Kota Bekasi</p>

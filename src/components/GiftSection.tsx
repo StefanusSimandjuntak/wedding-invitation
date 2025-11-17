@@ -36,7 +36,7 @@ export default function GiftSection() {
         <h2 className="title text-4xl md:text-5xl">Wedding Love Gift</h2>
         <div className="mt-4 h-px w-24 mx-auto bg-white/30" />
         <p className="mt-4 opacity-90 text-white max-w-2xl mx-auto">
-          Apabila tamu ingin mengirimkan hadiah kepada kedua mempelai dapat melalui rekening atau virtual account dibawah ini
+          If guests would like to send gifts to the couple, you can do so through the accounts below
         </p>
       </div>
 

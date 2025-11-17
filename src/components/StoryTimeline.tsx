@@ -7,7 +7,7 @@ export default function StoryTimeline() {
       id: 1,
       date: "2013",
       title: "First Meeting",
-      description: "Semua bermula pada tahun 2013, saat langkah kita pertama kali dipertemukan di masa sekolah. Dari pertemanan sederhana yang tumbuh seiring waktu, tercipta ikatan yang hangat dan bermakna — sebuah perjalanan indah yang berlanjut hingga tahun 2015, ketika kita memilih untuk saling mendukung dan berjalan bersama menapaki setiap bab kehidupan.",
+      description: "It all began in 2013, when our paths first crossed during our school days. From a simple friendship that grew over time, a warm and meaningful bond was created — a beautiful journey that continued until 2015, when we chose to support each other and walk together through every chapter of life.",
       image1: "/assets/images/IMG-20251107-WA0010.jpg",
       image2: "/assets/images/IMG-20251107-WA0012.jpg",
     },
@@ -15,7 +15,7 @@ export default function StoryTimeline() {
       id: 2,
       date: "July 20, 2025",
       title: "Engagement",
-      description: "Setelah bertahun-tahun berjalan beriringan — tumbuh bersama, saling menguatkan, dan merangkai mimpi dalam satu langkah — kami akhirnya tiba pada momen penuh makna. Pada bulan Juli 2025, dengan hati yang dipenuhi syukur, kami memohon restu dan merayakan pertunangan kami sebagai awal dari kisah yang semakin indah.",
+      description: "After years of walking side by side — growing together, strengthening each other, and weaving dreams into one step — we finally arrived at a meaningful moment. In July 2025, with hearts full of gratitude, we sought blessings and celebrated our engagement as the beginning of an even more beautiful story.",
       image1: "/assets/images/IMG-20251107-WA0030.jpg",
       image2: "/assets/images/IMG-20251107-WA0017.jpg",
     },
@@ -23,7 +23,7 @@ export default function StoryTimeline() {
       id: 3,
       date: "December 06, 2025",
       title: "Wedding",
-      description: "Dengan hati yang sarat syukur dan dipenuhi harapan, kami menatap hari ini sebagai momen sakral untuk memulai perjalanan seumur hidup bersama. Di bulan Desember 2025, dua jiwa yang telah tumbuh dan saling melengkapi, kini bersatu dalam ikatan suci sebagai suami dan istri, menapaki hari-hari penuh cinta, tawa, dan cerita yang akan kita rajut selamanya.",
+      description: "With hearts full of gratitude and hope, we look upon this day as a sacred moment to begin our lifelong journey together. In December 2025, two souls who have grown and complemented each other now unite in a sacred bond as husband and wife, stepping into days filled with love, laughter, and stories we will weave forever.",
       image1: "/assets/images/IMG-20251107-WA0036.jpg",
       image2: "/assets/images/IMG-20251107-WA0033.jpg",
     },
@@ -35,7 +35,7 @@ export default function StoryTimeline() {
         <h2 className="title text-4xl md:text-5xl">Our Love Story</h2>
         <div className="mt-4 h-px w-24 mx-auto bg-white/30" />
         <p className="mt-4 opacity-90 text-white max-w-2xl mx-auto">
-          Perjalanan cinta Dewi Manca Indira dan Ihsan Taqwa yang penuh berkah dan kenangan indah.
+          The blessed love journey of Dewi Manca Indira and Ihsan Taqwa filled with beautiful memories.
         </p>
       </div>
 
