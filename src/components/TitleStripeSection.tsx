@@ -3,8 +3,8 @@ import Section from "@/components/Section";
 
 export default function TitleStripeSection({ sectionRef }: { sectionRef?: React.MutableRefObject<HTMLElement | null> }) {
   return (
-    <Section id="title" sectionRef={sectionRef} bgImage="/assets/images/8.jpg" nextId="couple" contentClassName="animate-zoom-in">
-      <div className="flex justify-center">
+    <Section id="title" sectionRef={sectionRef} bgImage="/assets/images/IMG-20251107-WA0030.jpg" nextId="couple" contentClassName="animate-zoom-in">
+      <div className="flex justify-center items-start md:items-center pt-32 md:pt-0">
         <div className="relative flex items-center gap-6 text-white">
           <div className="flex flex-col items-center animate-slide-in-left">
             <div className="h-16 w-px bg-white/80" />
