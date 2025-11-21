@@ -30,8 +30,8 @@ export default function CountdownSection() {
   return (
     <Section id="countdown" bgImage="/assets/images/IMG-20251107-WA0020.jpg" nextId="rsvp" contentClassName="animate-slide-in-right" blurBg>
       <div className="mx-auto max-w-2xl text-center">
-        <div className="card-glass p-8">
-          <div className="mx-auto mb-6 h-65 w-full max-w-md overflow-hidden rounded-2xl">
+        <div className="card-glass p-4 md:p-8">
+          <div className="mx-auto mb-4 md:mb-6 h-48 md:h-65 w-full max-w-md overflow-hidden rounded-2xl">
             <div className="h-full w-full  transition-transform duration-700 origin-center">
               <Image 
                 src="/assets/images/IMG-20251107-WA0016.jpg" 
@@ -45,11 +45,11 @@ export default function CountdownSection() {
               />
             </div>
           </div>
-          <h3 className="mb-4 text-2xl font-serif">Wedding Countdown</h3>
-          <div className="grid grid-cols-4 gap-4">
+          <h3 className="mb-3 md:mb-4 text-xl md:text-2xl font-serif">Wedding Countdown</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             {[{label:"Days",v:time.days},{label:"Hours",v:time.hours},{label:"Minutes",v:time.minutes},{label:"Seconds",v:time.seconds}].map((t)=> (
-              <div key={t.label} className="rounded-xl bg-white/10 p-4">
-                <div className="text-3xl font-bold">{t.v}</div>
+              <div key={t.label} className="rounded-xl bg-white/10 p-2 md:p-4">
+                <div className="text-2xl md:text-3xl font-bold">{t.v}</div>
                 <div className="mt-1 text-xs opacity-80">{t.label}</div>
               </div>
             ))}
@@ -60,30 +60,30 @@ export default function CountdownSection() {
             <p className="opacity-90">Jam: 11:00 - Selesai</p>
             <p className="mt-2 font-semibold">Gedung Pemuda Ambarawa</p>
             <a href="#" className="mt-5 inline-flex items-center justify-center rounded-xl border border-white/30 bg-white/10 px-5 py-3 text-sm hover:bg-white/20">Watch Live Wedding</a> */}
-        <div className="card-glass mx-auto mt-10 max-w-4xl p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="card-glass mx-auto mt-6 md:mt-10 max-w-4xl p-4 md:p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div className="text-center">
-              <div className="my-6 h-px w-full bg-white/20" />
-              <h4 className="text-2xl font-serif">Ceremony</h4>
-              <p className="mt-2 opacity-90">Saturday, December 6, 2025</p>
-              <p className="opacity-90">Time: 10:00 - 11:00</p>
-              <p className="mt-2 font-semibold">Lapangan Bulu Tangkis</p>
+              <div className="my-4 md:my-6 h-px w-full bg-white/20" />
+              <h4 className="text-xl md:text-2xl font-serif">Ceremony</h4>
+              <p className="mt-2 text-sm md:text-base opacity-90">Saturday, December 6, 2025</p>
+              <p className="text-sm md:text-base opacity-90">Time: 10:00 - 11:00</p>
+              <p className="mt-2 text-sm md:text-base font-semibold">Lapangan Bulu Tangkis</p>
               <br /><hr />
-              <p className="mt-2">Taman Wisma Asri 2, Blok U 27, Jl. Cempaka XII RT. 007/030, Teluk Pucung, Bekasi Utara, Kota Bekasi</p>
+              <p className="mt-2 text-xs md:text-sm">Taman Wisma Asri 2, Blok U 27, Jl. Cempaka XII RT. 007/030, Teluk Pucung, Bekasi Utara, Kota Bekasi</p>
               
             </div>
             <div className="relative text-center">
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 hidden md:flex items-center justify-center">
                 <div className="h-full w-px bg-white/20" />
               </div>
               <div className="relative z-10">
-                <div className="my-6 h-px w-full bg-white/20" />
-                <h4 className="text-2xl font-serif">Reception</h4>
-                <p className="mt-2 opacity-90">Saturday, December 6, 2025</p>
-                <p className="opacity-90">Time: 11:00 - Until End</p>
-                <p className="mt-2 font-semibold">Lapangan Bulu Tangkis</p>
+                <div className="my-4 md:my-6 h-px w-full bg-white/20" />
+                <h4 className="text-xl md:text-2xl font-serif">Reception</h4>
+                <p className="mt-2 text-sm md:text-base opacity-90">Saturday, December 6, 2025</p>
+                <p className="text-sm md:text-base opacity-90">Time: 11:00 - Until End</p>
+                <p className="mt-2 text-sm md:text-base font-semibold">Lapangan Bulu Tangkis</p>
                 <br /><hr />
-              <p className="mt-2">Taman Wisma Asri 2, Blok U 27, Jl. Cempaka XII RT. 007/030, Teluk Pucung, Bekasi Utara, Kota Bekasi</p>
+              <p className="mt-2 text-xs md:text-sm">Taman Wisma Asri 2, Blok U 27, Jl. Cempaka XII RT. 007/030, Teluk Pucung, Bekasi Utara, Kota Bekasi</p>
               </div>
             </div>
           </div>
