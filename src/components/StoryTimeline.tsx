@@ -23,7 +23,7 @@ export default function StoryTimeline() {
       id: 3,
       date: "December 06, 2025",
       title: "Towards Marriage",
-      description: "December 2025 will be a sacred moment when two souls, who perfectly complement each other, are united in a holy bond. With love and laughter, we&apos;re ready to start a new chapter as husband and wife.",
+      description: "December 2025 will be a sacred moment when two souls, who perfectly complement each other, are united in a holy bond. With love and laughter, we're ready to start a new chapter as husband and wife.",
       image1: "/assets/images/IMG-20251107-WA0036.jpg",
       image2: "/assets/images/IMG-20251107-WA0033.jpg",
     },
