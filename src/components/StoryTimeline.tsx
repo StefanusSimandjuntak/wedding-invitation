@@ -6,24 +6,24 @@ export default function StoryTimeline() {
     {
       id: 1,
       date: "2013",
-      title: "The First Meeting",
-      description: "From the moment we met, it felt like the universe was giving us the chance to truly get to know one another. What started as a casual friendship slowly turned into something much deeper, and before long, we realized we wanted to walk through life together.",
+      title: "First Meeting",
+      description: "From the moment we met, it felt like the world gave us the chance to get to know each other more deeply. What started as a simple friendship blossomed into love, and we became certain that we wanted to walk this journey together.",
       image1: "/assets/images/IMG-20251107-WA0010.jpg",
       image2: "/assets/images/IMG-20251107-WA0012.jpg",
     },
     {
       id: 2,
       date: "July 20, 2025",
-      title: "Five Years Together",
-      description: "After years of growing side by side, strengthening each other, and dreaming together, we finally arrived at a significant moment. In July 2025, with hearts full of gratitude, we sought blessings and celebrated our engagement as the beginning of an even more beautiful story.",
+      title: "Love that Blossomed",
+      description: "The years we spent together laid a strong foundation. We dreamed, supported each other, and took every step forward. Finally, in July 2025, we celebrated our engagement as the beginning of an even more beautiful story.",
       image1: "/assets/images/IMG-20251107-WA0030.jpg",
       image2: "/assets/images/IMG-20251107-WA0017.jpg",
     },
     {
       id: 3,
       date: "December 06, 2025",
-      title: "The Journey to Marriage",
-      description: "In December 2025, with hearts full of gratitude and hope, we view this day as a sacred moment to begin our lifelong journey together. Two souls who have grown and complemented each other now unite in a sacred bond as husband and wife, stepping into days filled with love, laughter, and stories we'll continue to write forever.",
+      title: "Towards Marriage",
+      description: "December 2025 will be a sacred moment when two souls, who perfectly complement each other, are united in a holy bond. With love and laughter, we&apos;re ready to start a new chapter as husband and wife.",
       image1: "/assets/images/IMG-20251107-WA0036.jpg",
       image2: "/assets/images/IMG-20251107-WA0033.jpg",
     },
@@ -41,7 +41,7 @@ export default function StoryTimeline() {
         <div className="card-glass p-4 md:p-6 text-center text-white">
           <h3 className="text-2xl md:text-3xl font-serif font-bold mb-2">About Us</h3>
           <p className="opacity-90 leading-relaxed">
-            It all began in 2013, when our paths first crossed during our school days. From a simple friendship, a warm and meaningful bond was formed — a beautiful journey that continued until 2015, when we chose to support each other and walk together through every chapter of life.
+            It all began in 2013, when a simple meeting during our school days sparked a warm and meaningful connection. Two years later, in 2015, we decided to support each other and walk together through every chapter of life.
           </p>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function StoryTimeline() {
             </div>
           ))}
 
-          {/* The Love We've Built Section - Right Side */}
+          {/* A Future Together Section - Right Side */}
           <div className="relative flex items-center md:flex-row-reverse">
             {/* Timeline dot */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-white/20 hidden md:block" />
@@ -118,58 +118,6 @@ export default function StoryTimeline() {
                     {/* Blurred background layer */}
                     <div
                       className="absolute inset-0 bg-cover bg-center scale-110 blur-2xl"
-                      style={{ backgroundImage: `url(/assets/images/IMG-20251107-WA0006.jpg)` }}
-                    />
-                    {/* Main image layer - centered and contained */}
-                    <div
-                      className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-                      style={{ backgroundImage: `url(/assets/images/IMG-20251107-WA0006.jpg)` }}
-                    />
-                    <div className="absolute inset-0 bg-black/20" />
-                  </div>
-                  
-                  {/* Right Image */}
-                  <div className="relative overflow-hidden rounded-[var(--radius)] aspect-[3/4]">
-                    {/* Blurred background layer */}
-                    <div
-                      className="absolute inset-0 bg-cover bg-center scale-110 blur-2xl"
-                      style={{ backgroundImage: `url(/assets/images/IMG-20251107-WA0011.jpg)` }}
-                    />
-                    {/* Main image layer - centered and contained */}
-                    <div
-                      className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-                      style={{ backgroundImage: `url(/assets/images/IMG-20251107-WA0011.jpg)` }}
-                    />
-                    <div className="absolute inset-0 bg-black/20" />
-                  </div>
-                </div>
-                
-                <h3 className="text-2xl font-serif font-bold mb-2">The Love We&apos;ve Built</h3>
-                <p className="opacity-90 leading-relaxed">
-                  The years we&apos;ve spent together have laid a strong foundation. We&apos;ve not only supported each other, but we&apos;ve also dreamt and stepped forward together. Every step we&apos;ve taken has been part of a greater story, and now we&apos;re ready to move forward to the next chapter.
-                </p>
-              </div>
-            </div>
-
-            {/* Spacer for mobile */}
-            <div className="hidden md:block w-1/2" />
-          </div>
-
-          {/* Our Future Together Section - Left Side */}
-          <div className="relative flex items-center md:flex-row">
-            {/* Timeline dot */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-white/20 hidden md:block" />
-
-            {/* Content */}
-            <div className="w-full md:w-1/2 md:pr-12">
-              <div className="card-glass p-4 md:p-6 text-center text-white">
-                {/* Two images side by side with blur background */}
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  {/* Left Image */}
-                  <div className="relative overflow-hidden rounded-[var(--radius)] aspect-[3/4]">
-                    {/* Blurred background layer */}
-                    <div
-                      className="absolute inset-0 bg-cover bg-center scale-110 blur-2xl"
                       style={{ backgroundImage: `url(/assets/images/IMG-20251107-WA0020.jpg)` }}
                     />
                     {/* Main image layer - centered and contained */}
@@ -196,9 +144,9 @@ export default function StoryTimeline() {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-serif font-bold mb-2">Our Future Together</h3>
+                <h3 className="text-2xl font-serif font-bold mb-2">A Future Together</h3>
                 <p className="opacity-90 leading-relaxed">
-                  We know that every new day will bring new adventures, and we&apos;re ready to face them hand in hand. We will continue to build this life together, filled with love, happiness, and memories we&apos;ll share for the rest of our lives.
+                  We believe every day brings a new adventure. With our hands intertwined, we will continue to build a life full of love, happiness, and everlasting memories.
                 </p>
               </div>
             </div>
