@@ -31,7 +31,7 @@ export default function CountdownSection() {
     <Section id="countdown" bgImage="/assets/images/IMG-20251107-WA0020.jpg" nextId="rsvp" contentClassName="animate-slide-in-right" blurBg>
       <div className="mx-auto max-w-2xl text-center">
         <div className="card-glass p-4 md:p-8">
-          <div className="mx-auto mb-4 md:mb-6 h-48 md:h-65 w-full max-w-md overflow-hidden rounded-2xl">
+          <div className="mx-auto mb-4 md:mb-6 h-64 md:h-96 w-full max-w-md overflow-hidden rounded-2xl">
             <div className="h-full w-full  transition-transform duration-700 origin-center">
               <Image 
                 src="/assets/images/IMG-20251107-WA0016.jpg" 
