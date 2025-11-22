@@ -144,9 +144,9 @@ export default function StoryTimeline() {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-serif font-bold mb-2">The Love We've Built</h3>
+                <h3 className="text-2xl font-serif font-bold mb-2">The Love We&apos;ve Built</h3>
                 <p className="opacity-90 leading-relaxed">
-                  The years we've spent together have laid a strong foundation. We've not only supported each other, but we've also dreamt and stepped forward together. Every step we've taken has been part of a greater story, and now we're ready to move forward to the next chapter.
+                  The years we&apos;ve spent together have laid a strong foundation. We&apos;ve not only supported each other, but we&apos;ve also dreamt and stepped forward together. Every step we&apos;ve taken has been part of a greater story, and now we&apos;re ready to move forward to the next chapter.
                 </p>
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function StoryTimeline() {
                 
                 <h3 className="text-2xl font-serif font-bold mb-2">Our Future Together</h3>
                 <p className="opacity-90 leading-relaxed">
-                  We know that every new day will bring new adventures, and we're ready to face them hand in hand. We will continue to build this life together, filled with love, happiness, and memories we'll share for the rest of our lives.
+                  We know that every new day will bring new adventures, and we&apos;re ready to face them hand in hand. We will continue to build this life together, filled with love, happiness, and memories we&apos;ll share for the rest of our lives.
                 </p>
               </div>
             </div>

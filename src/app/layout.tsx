@@ -8,6 +8,8 @@ const inter = Inter({
   preload: true,
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wedding-invitation.vercel.app';
+
 export const metadata: Metadata = {
   title: "Wedding Of Manca & Ihsan",
   description: "Join us in celebrating the wedding of Manca & Ihsan. Find event details, RSVP, and more.",
@@ -19,7 +21,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
+    url: siteUrl,
     siteName: 'Wedding Of Manca & Ihsan',
+    title: 'Wedding Of Manca & Ihsan',
+    description: 'Join us in celebrating the wedding of Manca & Ihsan. Find event details, RSVP, and more.',
+    images: [
+      {
+        url: `${siteUrl}/assets/images/WhatsApp-Image-heroo.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Wedding Of Manca & Ihsan',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Wedding Of Manca & Ihsan',
+    description: 'Join us in celebrating the wedding of Manca & Ihsan. Find event details, RSVP, and more.',
+    images: [`${siteUrl}/assets/images/WhatsApp-Image-heroo.jpg`],
   },
 };
 
