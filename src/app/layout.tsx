@@ -8,7 +8,7 @@ const inter = Inter({
   preload: true,
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://wedding-invitation.vercel.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://im-wedding.vercel.app';
 
 export const metadata: Metadata = {
   title: "Wedding Of Manca & Ihsan",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'Join us in celebrating the wedding of Manca & Ihsan. Find event details, RSVP, and more.',
     images: [
       {
-        url: `${siteUrl}/assets/images/WhatsApp-Image-heroo.jpg`,
+        url: `${siteUrl}/assets/images/IMG-20251112-WA0058.jpg`,
         width: 1200,
         height: 630,
         alt: 'Wedding Of Manca & Ihsan',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Wedding Of Manca & Ihsan',
     description: 'Join us in celebrating the wedding of Manca & Ihsan. Find event details, RSVP, and more.',
-    images: [`${siteUrl}/assets/images/WhatsApp-Image-heroo.jpg`],
+    images: [`${siteUrl}/assets/images/IMG-20251112-WA0058.jpg`],
   },
 };
 
